@@ -214,7 +214,8 @@ img {
 /* Hero button and modal */
 
 .hero-button, 
-.form-btn {
+.form-btn,
+.btn-footer {
     display: inline-block;
     border-radius: 4px;
     padding: 10px 32px;
@@ -238,7 +239,9 @@ img {
 .hero-button:hover,
 .hero-button:focus,
 .form-btn:hover,
-.form-btn:focus {
+.form-btn:focus,
+.btn-footer:hover,
+.btn-footer:focus {
     background-color: #188CE8;
   }  
   
@@ -556,14 +559,15 @@ img {
 
 .foot {
     display: flex;
-    align-items: baseline;  
+    align-items: baseline;
   }
 
 .social-footer {
     margin-left: 70px;
   }
 
-.social-footer-title {
+.social-footer-title,
+.last-block-title {
     color: var(--primary-white-color);
     font-weight: 700;
     margin-bottom: 20px;
@@ -571,6 +575,51 @@ img {
 
 .social-footer-item:not(:last-child) {
     margin-right: 10px;
+  }
+
+.last-block-footer {
+    margin-left: 93px;
+  }
+
+.input-footer {
+    width: 358px;
+    height: 50px;
+    padding: 15px 16px;
+    color: var(--primary-white-color);
+    background-color: var(--second-bgc);
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);    
+  } 
+
+.input-footer::placeholder {
+    font-size: 16px;  
+    line-height: 1.25;
+    font-style: normal;
+    color: var(--third-text-color);
+  }
+
+.last-block-item {
+    position: relative;
+  }
+
+.btn-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 29px;
+    padding-right: 28px;
+    position: absolute;
+    bottom: 1%;
+    left: 100%;
+    margin-left: 12px;
+  }
+
+.icon-send {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
   }
 
 /* Portfolio page */
@@ -732,8 +781,10 @@ img {
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   } 
 
-.form-input:focus {
+.form-input:focus,
+.input-footer:focus {
     border-color: var(--accent-color);
+    outline: none;
   }
   
 .form-input:focus ~ .form-icon {
@@ -773,10 +824,9 @@ textarea {
   }
   
 .checkbox {
-    /* -webkit-appearance: none;
+    -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    position: absolute; */
     position: absolute;
     width: 1px;
     height: 1px;
